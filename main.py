@@ -4,10 +4,10 @@ import socket
 my_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Dial the phone. Dialing it to the domain and the port
-my_socket.connect(("pypi.org", 443))
+my_socket.connect(("data.pr4e.org", 80))
 
 # Now sending the command cmd, a variable which has a UTF-8 string in it
-cmd = "GET https://pypi.org/project/sockets/ HTTP/1.0\r\n\r\n".encode()
+cmd = "GET http://data.pr4e.org/page1.htm HTTP/1.0\r\n\r\n".encode()
 my_socket.send(cmd)
 
 # We are receiving data until the socket is closed.
